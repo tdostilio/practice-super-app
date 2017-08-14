@@ -1,0 +1,21 @@
+<div class="members-div">
+<h1 class="members-header">Members Page</h1>
+</div>
+<div class="search-div">
+    <input class="search" type="text" name="search" placeholder="Search..">
+    <button type="submit" class="search-button" data-type-submit-button>Search</button>
+</div>
+{{#each members}}
+<div class="entry">
+<h1>{{surname}}, {{firstname}}</h1>
+<p>
+    Address: {{address}}
+</p>
+<p>
+    Zip Code: {{zipcode}}
+</p>
+<p>
+    Telephone: {{telephone}}
+</p>
+</div>
+{{/each}}

@@ -1,8 +1,65 @@
 body {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: -webkit-linear-gradient(top, #fc00ff, #00dbde);
+  background-image: -moz-linear-gradient(top, #fc00ff, #00dbde);
+  background-image: linear-gradient(to bottom, #fc00ff, #00dbde);;
 }
 
 a {
   color: #00B7FF;
+}
+
+.members-div {
+  box-shadow: inset 0 0 10px #000000;
+  width: 100%;
+  background-image: linear-gradient(to bottom, #f7971e, #ffd200);
+}
+.members-header {
+  display: block;
+  font-family: 'Lobster', cursive;
+  text-shadow: 2px 2px #000000;
+  background: -webkit-linear-gradient(#eee, silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 5em;
+}
+.search-div {
+  display: flex;
+  margin: auto;
+  margin-top: 1em;
+  width: 80%;
+  box-shadow: inset 0 0 10px #000000;
+}
+.search {
+  width: 100%;
+  height: 3em;
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+.search-button {
+  width: 10em;
+  font-size: 1em;
+  font-weight: bold;
+  
+}
+
+.entry h1 {
+  color: black;
+}
+
+.entry {
+  width: 20%;
+  min-width: 18em;
+  margin: 1em;
+  padding: 1em;
+  background-image: linear-gradient(to bottom, #b2fefa, #0ed2f7
+);
+  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  box-shadow: inset 0 0 10px #000000;
 }

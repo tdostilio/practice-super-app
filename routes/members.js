@@ -54,5 +54,8 @@ router.post('/:id/edit', function(req, res, next) {
     }).catch(console.log) 
 });
 
+router.get('/new', function(req,res,next) {
+    req.render('addMember');
+})
 
 module.exports = router;

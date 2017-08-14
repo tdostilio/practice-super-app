@@ -7,7 +7,6 @@ router.get('/:id', function(req, res, next) {
     db.one(`
         select * from cd.facilities where facid =${req.params.id};
     `).then( (result) => {
-        console.log(result);
         res.render('facilities', { 
             facility: result
         });

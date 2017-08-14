@@ -1,13 +1,15 @@
 var express = require('express');
 var router = express.Router();
-
-/* GET users listing. */
+const db = require('../db');
+/* GET home page. */
 router.get('/', function(req, res, next) {
-  // res.send('respond with a resource');
-  res.render('users', {
-    username: 'tdostilio',
-    password: 'you did it right?'
-  });
+    db.query(`
+        select * from cd.members;
+    `).then( (result) => {
+        res.render('members', { 
+            members: result
+        });
+    }); 
 });
 
 module.exports = router;

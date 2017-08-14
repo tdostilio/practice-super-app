@@ -13,4 +13,46 @@ router.get('/', function(req, res, next) {
     }); 
 });
 
+router.get('/:id', function(req, res, next) {
+    db.one(`select * from cd.members where memid=${req.params.id};
+    `).then( (result) => {
+        console.log(result);
+        res.render('members', {
+            members: [result]
+        });
+    });
+});
+
+router.get('/:id/edit', function(req, res, next) {
+    db.one(`
+        select * from cd.members where memid=${req.params.id};
+    `).then( (result) => {
+        console.log(result);
+        res.render('newMembers', {
+            member: result
+        });
+    });
+});
+
+router.post('/:id/edit', function(req, res, next) {
+    console.log(req.body);
+
+    db.result(`
+        update cd.members
+        set
+        surname='${req.body.surname}'
+        where memid=${req.params.id};
+        update cd.members
+        set
+        firstname='${req.body.firstname}'
+        where memid=${req.params.id};
+    `).then((result) => {
+        console.log(result);
+        res.render('newMembers', {
+            member: result
+        });
+    }).catch(console.log) 
+});
+
+
 module.exports = router;

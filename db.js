@@ -1,4 +1,6 @@
 require('dotenv').config();
+require('body-parser');
+
 const pg = require('pg-promise')();
 const dbConfig = {
     host: process.env.DB_HOST,

@@ -6,7 +6,8 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: -webkit-linear-gradient(top, #fc00ff, #00dbde);
   background-image: -moz-linear-gradient(top, #fc00ff, #00dbde);
-  background-image: linear-gradient(to bottom, #fc00ff, #00dbde);;
+  background-image: linear-gradient(to bottom, #fc00ff, #00dbde);
+  background-repeat: none;
 }
 
 a {
@@ -34,6 +35,11 @@ a {
   margin-top: 1em;
   width: 80%;
   box-shadow: inset 0 0 10px #000000;
+}
+
+.new-member-form {
+  display: flex;
+  width: 100%;
 }
 .search {
   width: 100%;

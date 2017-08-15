@@ -1,6 +1,7 @@
 {{!-- {{#with member}} --}}
 <h1 class='members-header'>Add New Member</h1>
-<form method="post" class='new-member-form'>  
+<div class='new-member-form'>
+<form method="post">  
   <input type="text" name="surname" placeholder='Last' value={{surname}}>
   <input type="text" name="firstname" placeholder='First' value={{firstname}}>
   <input type="text" name="address" placeholder='Address' value={{address}}>
@@ -8,4 +9,5 @@
   <input type="text" name="telephone" placeholder='Telephone' value={{telephone}}>
   <input type="submit">
 </form>
+</div>
 {{!-- {{/with}} --}}

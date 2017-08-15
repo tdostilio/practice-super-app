@@ -13,7 +13,11 @@ router.get('/', function(req, res, next) {
     }); 
 });
 
-router.get('/:id', function(req, res, next) {
+router.get('/new', function(req,res,next) {
+    res.render('addMember', {});
+})
+
+router.get('id/:id', function(req, res, next) {
     db.one(`select * from cd.members where memid=${req.params.id};
     `).then( (result) => {
         console.log(result);
@@ -54,8 +58,6 @@ router.post('/:id/edit', function(req, res, next) {
     }).catch(console.log) 
 });
 
-router.get('/new', function(req,res,next) {
-    req.render('addMember');
-})
+
 
 module.exports = router;
